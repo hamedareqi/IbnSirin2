@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - لوحة التحكم</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-login-body">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="../logo.png" alt="College Logo" class="login-logo">
+                <h1>لوحة التحكم</h1>
+                <p>كلية ابن سيرين للعلوم الطبية والتقنية</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        اسم المستخدم
+                    </label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        كلمة المرور
+                    </label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="password-toggle" onclick="togglePassword()">
+                        <i class="fas fa-eye" id="passwordIcon"></i>
+                    </span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        تذكرني
+                    </label>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    تسجيل الدخول
+                </button>
+                
+                <div class="error-message" id="errorMessage" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="errorText"></span>
+                </div>
+            </form>
+            
+            <div class="login-footer">
+                <p>© 2023 كلية ابن سيرين للعلوم الطبية والتقنية</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordIcon = document.getElementById('passwordIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.className = 'fas fa-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.className = 'fas fa-eye';
+            }
+        }
+        
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const remember = document.getElementById('remember').checked;
+            
+            // Simple demo authentication (في التطبيق الحقيقي، يجب استخدام خادم آمن)
+            if (username === 'admin' && password === 'admin123') {
+                // Store login state
+                if (remember) {
+                    localStorage.setItem('adminLoggedIn', 'true');
+                } else {
+                    sessionStorage.setItem('adminLoggedIn', 'true');
+                }
+                
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                showError('اسم المستخدم أو كلمة المرور غير صحيحة');
+            }
+        });
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            
+            errorText.textContent = message;
+            errorDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Check if already logged in
+        if (localStorage.getItem('adminLoggedIn') || sessionStorage.getItem('adminLoggedIn')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
+

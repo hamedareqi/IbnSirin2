@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - كلية ابن سيرين</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <h1><i class="fas fa-tachometer-alt"></i> لوحة التحكم</h1>
+        <div class="admin-user-info">
+            <div class="admin-user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <span>مرحباً، المدير</span>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                تسجيل الخروج
+            </button>
+        </div>
+    </header>
+    
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <h2><i class="fas fa-cogs"></i> إدارة الموقع</h2>
+            <ul>
+                <li><a href="#dashboard" class="active" onclick="showSection('dashboard')">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a></li>
+                <li><a href="#content" onclick="showSection('content')">
+                    <i class="fas fa-edit"></i> إدارة المحتوى
+                </a></li>
+                <li><a href="#news" onclick="showSection('news')">
+                    <i class="fas fa-newspaper"></i> إدارة الأخبار
+                </a></li>
+                <li><a href="#pages" onclick="showSection('pages')">
+                    <i class="fas fa-file-alt"></i> إدارة الصفحات
+                </a></li>
+                <li><a href="#faculty" onclick="showSection('faculty')">
+                    <i class="fas fa-users"></i> إدارة الكادر
+                </a></li>
+                <li><a href="#students" onclick="showSection('students')">
+                    <i class="fas fa-user-graduate"></i> إدارة الطلاب
+                </a></li>
+                <li><a href="#media" onclick="showSection('media')">
+                    <i class="fas fa-images"></i> إدارة الوسائط
+                </a></li>
+                <li><a href="#settings" onclick="showSection('settings')">
+                    <i class="fas fa-cog"></i> إعدادات الموقع
+                </a></li>
+                <li><a href="#users" onclick="showSection('users')">
+                    <i class="fas fa-user-shield"></i> إدارة المستخدمين
+                </a></li>
+                <li><a href="#backup" onclick="showSection('backup')">
+                    <i class="fas fa-database"></i> النسخ الاحتياطي
+                </a></li>
+            </ul>
+        </aside>
+        
+        <!-- Admin Content -->
+        <main class="admin-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> إحصائيات الموقع</h2>
+                    <button class="btn btn-primary" onclick="refreshStats()">
+                        <i class="fas fa-sync-alt"></i> تحديث الإحصائيات
+                    </button>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>إجمالي الطلاب</h3>
+                        <p id="totalStudents">1,247</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>أعضاء هيئة التدريس</h3>
+                        <p id="totalFaculty">89</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>التخصصات المتاحة</h3>
+                        <p id="totalSpecialties">12</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الأخبار المنشورة</h3>
+                        <p id="totalNews">45</p>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-clock"></i> النشاطات الأخيرة</h2>
+                    </div>
+                    
+                    <div class="recent-activities">
+                        <div class="activity-item">
+                            <i class="fas fa-plus-circle text-success"></i>
+                            <div>
+                                <strong>تم إضافة خبر جديد</strong>
+                                <p>إعلان عن بدء التسجيل للفصل الدراسي الجديد</p>
+                                <small>منذ ساعتين</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-edit text-warning"></i>
+                            <div>
+                                <strong>تم تحديث صفحة التخصصات</strong>
+                                <p>إضافة معلومات جديدة عن تخصص الهندسة الطبية</p>
+                                <small>منذ 4 ساعات</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-user-plus text-info"></i>
+                            <div>
+                                <strong>تم إضافة عضو هيئة تدريس جديد</strong>
+                                <p>د. أحمد محمد - قسم العلوم الطبية</p>
+                                <small>أمس</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Content Management Section -->
+            <section id="content-section" class="content-section" style="display: none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-edit"></i> إدارة المحتوى</h2>
+                    <button class="btn btn-primary" onclick="openModal('contentModal')">
+                        <i class="fas fa-plus"></i> إضافة محتوى جديد
+                    </button>
+                </div>
+                
+                <div class="content-tabs">
+                    <button class="tab-btn active" onclick="showContentTab('homepage')">الصفحة الرئيسية</button>
+                    <button class="tab-btn" onclick="showContentTab('about')">من نحن</button>
+                    <button class="tab-btn" onclick="showContentTab('specialties')">التخصصات</button>
+                    <button class="tab-btn" onclick="showContentTab('contact')">اتصل بنا</button>
+                </div>
+                
+                <div id="homepage-content" class="tab-content">
+                    <div class="form-group">
+                        <label>عنوان الصفحة الرئيسية</label>
+                        <input type="text" id="homeTitle" value="مرحباً بكم في كلية ابن سيرين للعلوم الطبية والتقنية">
+                    </div>
+                    <div class="form-group">
+                        <label>وصف الصفحة الرئيسية</label>
+                        <textarea id="homeDescription" rows="4">نحن نسعى لتقديم تعليم متميز في مجال العلوم الطبية والتقنية، ونهدف إلى إعداد جيل من الخريجين المؤهلين للمساهمة في بناء المجتمع وتطويره.</textarea>
+                    </div>
+                    <button class="btn btn-success" onclick="saveContent('homepage')">
+                        <i class="fas fa-save"></i> حفظ التغييرات
+                    </button>
+                </div>
+            </section>
+            
+            <!-- News Management Section -->
+            <section id="news-section" class="content-section" style="display: none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-newspaper"></i> إدارة الأخبار</h2>
+                    <button class="btn btn-primary" onclick="openModal('newsModal')">
+                        <i class="fas fa-plus"></i> إضافة خبر جديد
+                    </button>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>العنوان</th>
+                            <th>التاريخ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="newsTableBody">
+                        <tr>
+                            <td>إعلان عن بدء التسجيل للفصل الدراسي الجديد</td>
+                            <td>2023-12-15</td>
+                            <td><span class="badge badge-success">منشور</span></td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="editNews(1)">
+                                    <i class="fas fa-edit"></i> تعديل
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteNews(1)">
+                                    <i class="fas fa-trash"></i> حذف
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ورشة عمل حول التقنيات الحديثة في الطب</td>
+                            <td>2023-12-10</td>
+                            <td><span class="badge badge-warning">مسودة</span></td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="editNews(2)">
+                                    <i class="fas fa-edit"></i> تعديل
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteNews(2)">
+                                    <i class="fas fa-trash"></i> حذف
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Pages Management Section -->
+            <section id="pages-section" class="content-section" style="display: none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> إدارة الصفحات</h2>
+                    <button class="btn btn-primary" onclick="openModal('pageModal')">
+                        <i class="fas fa-plus"></i> إضافة صفحة جديدة
+                    </button>
+                </div>
+                
+                <div class="pages-grid">
+                    <div class="page-card">
+                        <h3>كادر الكلية</h3>
+                        <p>صفحة تعرض أعضاء هيئة التدريس والموظفين</p>
+                        <div class="page-actions">
+                            <button class="btn btn-warning btn-sm" onclick="editPage('faculty')">
+                                <i class="fas fa-edit"></i> تعديل
+                            </button>
+                            <button class="btn btn-info btn-sm" onclick="viewPage('faculty')">
+                                <i class="fas fa-eye"></i> عرض
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="page-card">
+                        <h3>لوائح الكلية</h3>
+                        <p>صفحة تحتوي على لوائح وقوانين الكلية</p>
+                        <div class="page-actions">
+                            <button class="btn btn-warning btn-sm" onclick="editPage('regulations')">
+                                <i class="fas fa-edit"></i> تعديل
+                            </button>
+                            <button class="btn btn-info btn-sm" onclick="viewPage('regulations')">
+                                <i class="fas fa-eye"></i> عرض
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="page-card">
+                        <h3>الأنشطة</h3>
+                        <p>صفحة تعرض الأنشطة الطلابية والفعاليات</p>
+                        <div class="page-actions">
+                            <button class="btn btn-warning btn-sm" onclick="editPage('activities')">
+                                <i class="fas fa-edit"></i> تعديل
+                            </button>
+                            <button class="btn btn-info btn-sm" onclick="viewPage('activities')">
+                                <i class="fas fa-eye"></i> عرض
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Settings Section -->
+            <section id="settings-section" class="content-section" style="display: none;">
+                <div class="section-header">
+                    <h2><i class="fas fa-cog"></i> إعدادات الموقع</h2>
+                </div>
+                
+                <div class="settings-tabs">
+                    <button class="tab-btn active" onclick="showSettingsTab('general')">عام</button>
+                    <button class="tab-btn" onclick="showSettingsTab('appearance')">المظهر</button>
+                    <button class="tab-btn" onclick="showSettingsTab('security')">الأمان</button>
+                    <button class="tab-btn" onclick="showSettingsTab('email')">البريد الإلكتروني</button>
+                </div>
+                
+                <div id="general-settings" class="tab-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>اسم الموقع</label>
+                            <input type="text" value="كلية ابن سيرين للعلوم الطبية والتقنية">
+                        </div>
+                        <div class="form-group">
+                            <label>وصف الموقع</label>
+                            <input type="text" value="التميز في التعليم لبناء مستقبل أفضل">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <input type="text" value="+967 780 536 333">
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" value="ibnsereencollage@gmail.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>العنوان</label>
+                        <input type="text" value="اليمن - صنعاء - شملان">
+                    </div>
+                    
+                    <button class="btn btn-success">
+                        <i class="fas fa-save"></i> حفظ الإعدادات
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Modals -->
+    <!-- News Modal -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إضافة خبر جديد</h3>
+                <button class="close-modal" onclick="closeModal('newsModal')">&times;</button>
+            </div>
+            
+            <form id="newsForm">
+                <div class="form-group">
+                    <label>عنوان الخبر</label>
+                    <input type="text" id="newsTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>محتوى الخبر</label>
+                    <textarea id="newsContent" rows="6" required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>تاريخ النشر</label>
+                        <input type="date" id="newsDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>حالة النشر</label>
+                        <select id="newsStatus">
+                            <option value="published">منشور</option>
+                            <option value="draft">مسودة</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>صورة الخبر</label>
+                    <div class="file-upload" onclick="document.getElementById('newsImage').click()">
+                        <div class="file-upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <p>اضغط لرفع صورة أو اسحب الملف هنا</p>
+                        <input type="file" id="newsImage" accept="image/*">
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> حفظ الخبر
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('newsModal')">
+                        إلغاء
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="admin-script.js"></script>
+    <script>
+        // Check authentication
+        if (!localStorage.getItem('adminLoggedIn') && !sessionStorage.getItem('adminLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+        
+        // Show section function
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').style.display = 'block';
+            
+            // Update active menu item
+            const menuItems = document.querySelectorAll('.admin-sidebar a');
+            menuItems.forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        // Logout function
+        function logout() {
+            localStorage.removeItem('adminLoggedIn');
+            sessionStorage.removeItem('adminLoggedIn');
+            window.location.href = 'login.html';
+        }
+        
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+        
+        // Refresh stats function
+        function refreshStats() {
+            // Simulate data refresh
+            const stats = ['totalStudents', 'totalFaculty', 'totalSpecialties', 'totalNews'];
+            stats.forEach(stat => {
+                const element = document.getElementById(stat);
+                element.style.opacity = '0.5';
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                }, 1000);
+            });
+            
+            // Show success message
+            showAlert('تم تحديث الإحصائيات بنجاح', 'success');
+        }
+        
+        // Show alert function
+        function showAlert(message, type) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            
+            document.querySelector('.admin-content').insertBefore(alert, document.querySelector('.admin-content').firstChild);
+            
+            setTimeout(() => {
+                alert.remove();
+            }, 3000);
+        }
+        
+        // Tab functions
+        function showContentTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.style.display = 'none');
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-content').style.display = 'block';
+            
+            // Update active tab button
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        // Save content function
+        function saveContent(section) {
+            showAlert('تم حفظ المحتوى بنجاح', 'success');
+        }
+        
+        // News management functions
+        function editNews(id) {
+            openModal('newsModal');
+            // Load news data for editing
+        }
+        
+        function deleteNews(id) {
+            if (confirm('هل أنت متأكد من حذف هذا الخبر؟')) {
+                showAlert('تم حذف الخبر بنجاح', 'success');
+                // Remove from table
+            }
+        }
+        
+        // Page management functions
+        function editPage(pageName) {
+            showAlert('سيتم فتح محرر الصفحة قريباً', 'info');
+        }
+        
+        function viewPage(pageName) {
+            window.open(`../${pageName}.html`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
