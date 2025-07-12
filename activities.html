@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنشطة - كلية ابن سيرين للعلوم الطبية والتقنية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body dir="rtl">
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button onclick="toggleLanguage()" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span id="lang-text">English</span>
+        </button>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/967780536333" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Sidebar Navigation for Desktop -->
+    <nav class="sidebar-nav">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.png" alt="College Logo">
+                <div class="logo-text">
+                    <h1 data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                    <p data-ar="للعلوم الطبية والتقنية" data-en="For Medical and Technical Sciences">للعلوم الطبية والتقنية</p>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a></li>
+            <li><a href="index.html#about"><i class="fas fa-info-circle"></i> <span data-ar="من نحن" data-en="About Us">من نحن</span></a></li>
+            <li><a href="index.html#specialties"><i class="fas fa-graduation-cap"></i> <span data-ar="التخصصات" data-en="Specialties">التخصصات</span></a></li>
+            <li><a href="faculty.html"><i class="fas fa-users"></i> <span data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</span></a></li>
+            <li><a href="regulations.html"><i class="fas fa-file-alt"></i> <span data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</span></a></li>
+            <li><a href="activities.html" class="active"><i class="fas fa-calendar-alt"></i> <span data-ar="الأنشطة" data-en="Activities">الأنشطة</span></a></li>
+            <li><a href="deanship.html"><i class="fas fa-university"></i> <span data-ar="العمادة" data-en="Deanship">العمادة</span></a></li>
+            <li><a href="structure.html"><i class="fas fa-sitemap"></i> <span data-ar="الهيكل التنظيمي" data-en="Organizational Structure">الهيكل التنظيمي</span></a></li>
+            <li><a href="innovations.html"><i class="fas fa-lightbulb"></i> <span data-ar="ابتكارات الطلاب" data-en="Student Innovations">ابتكارات الطلاب</span></a></li>
+            <li><a href="graduates.html"><i class="fas fa-user-graduate"></i> <span data-ar="الخريجين" data-en="Graduates">الخريجين</span></a></li>
+            <li><a href="medical-sciences.html"><i class="fas fa-heartbeat"></i> <span data-ar="العلوم الطبية" data-en="Medical Sciences">العلوم الطبية</span></a></li>
+            <li><a href="engineering.html"><i class="fas fa-cogs"></i> <span data-ar="الهندسة" data-en="Engineering">الهندسة</span></a></li>
+            <li><a href="technical-sciences.html"><i class="fas fa-laptop-code"></i> <span data-ar="العلوم التقنية" data-en="Technical Sciences">العلوم التقنية</span></a></li>
+            <li><a href="management.html"><i class="fas fa-chart-line"></i> <span data-ar="العلوم الإدارية" data-en="Management Sciences">العلوم الإدارية</span></a></li>
+            <li><a href="index.html#news"><i class="fas fa-newspaper"></i> <span data-ar="الأخبار" data-en="News">الأخبار</span></a></li>
+            <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> <span data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</span></a></li>
+            <li><a href="index.html#contact"><i class="fas fa-phone"></i> <span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span></a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="College Logo">
+            <div class="logo-text">
+                <h1 data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                <p data-ar="للعلوم الطبية والتقنية" data-en="For Medical and Technical Sciences">للعلوم الطبية والتقنية</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="menu-header">
+            <div class="logo">
+                <img src="logo.png" alt="College Logo" style="height: 50px;">
+                <div class="logo-text">
+                    <h1 style="font-size: 1.2rem;" data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                </div>
+            </div>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <ul>
+            <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            <li><a href="index.html#specialties" data-ar="التخصصات" data-en="Specialties">التخصصات</a></li>
+            <li><a href="faculty.html" data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</a></li>
+            <li><a href="regulations.html" data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</a></li>
+            <li><a href="activities.html" data-ar="الأنشطة" data-en="Activities">الأنشطة</a></li>
+            <li><a href="deanship.html" data-ar="العمادة" data-en="Deanship">العمادة</a></li>
+            <li><a href="structure.html" data-ar="الهيكل التنظيمي" data-en="Organizational Structure">الهيكل التنظيمي</a></li>
+            <li><a href="innovations.html" data-ar="ابتكارات الطلاب" data-en="Student Innovations">ابتكارات الطلاب</a></li>
+            <li><a href="graduates.html" data-ar="الخريجين" data-en="Graduates">الخريجين</a></li>
+            <li><a href="index.html#news" data-ar="الأخبار" data-en="News">الأخبار</a></li>
+            <li><a href="index.html#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+            <li><a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 data-ar="الأنشطة الطلابية" data-en="Student Activities">الأنشطة الطلابية</h1>
+                <p data-ar="تعرف على الأنشطة والفعاليات المتنوعة التي تنظمها كلية ابن سيرين لطلابها" data-en="Discover the diverse activities and events organized by Ibn Sirin College for its students">تعرف على الأنشطة والفعاليات المتنوعة التي تنظمها كلية ابن سيرين لطلابها</p>
+            </div>
+        </section>
+        
+        <!-- Activities Content -->
+        <section class="activities-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="الأنشطة الأكاديمية" data-en="Academic Activities">الأنشطة الأكاديمية</h2>
+                <p data-ar="أنشطة تعليمية وبحثية تهدف إلى تطوير المهارات الأكاديمية للطلاب" data-en="Educational and research activities aimed at developing students' academic skills">أنشطة تعليمية وبحثية تهدف إلى تطوير المهارات الأكاديمية للطلاب</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 data-ar="المؤتمرات العلمية" data-en="Scientific Conferences">المؤتمرات العلمية</h3>
+                    <p data-ar="تنظيم مؤتمرات علمية سنوية في مختلف التخصصات لعرض البحوث والدراسات الحديثة" data-en="Organizing annual scientific conferences in various specialties to present recent research and studies">تنظيم مؤتمرات علمية سنوية في مختلف التخصصات لعرض البحوث والدراسات الحديثة</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-ar="ورش العمل التطبيقية" data-en="Practical Workshops">ورش العمل التطبيقية</h3>
+                    <p data-ar="ورش عمل متخصصة في المختبرات والمعامل لتطبيق المعرفة النظرية عملياً" data-en="Specialized workshops in laboratories to apply theoretical knowledge practically">ورش عمل متخصصة في المختبرات والمعامل لتطبيق المعرفة النظرية عملياً</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 data-ar="الندوات العلمية" data-en="Scientific Seminars">الندوات العلمية</h3>
+                    <p data-ar="ندوات أسبوعية يقدمها أساتذة وخبراء في مختلف المجالات العلمية والتقنية" data-en="Weekly seminars presented by professors and experts in various scientific and technical fields">ندوات أسبوعية يقدمها أساتذة وخبراء في مختلف المجالات العلمية والتقنية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 data-ar="المسابقات العلمية" data-en="Scientific Competitions">المسابقات العلمية</h3>
+                    <p data-ar="مسابقات في البحث العلمي والابتكار والبرمجة لتحفيز الطلاب على التميز" data-en="Competitions in scientific research, innovation, and programming to motivate students to excel">مسابقات في البحث العلمي والابتكار والبرمجة لتحفيز الطلاب على التميز</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cultural Activities -->
+        <section class="cultural-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="الأنشطة الثقافية" data-en="Cultural Activities">الأنشطة الثقافية</h2>
+                <p data-ar="أنشطة تهدف إلى إثراء الجانب الثقافي والفكري للطلاب" data-en="Activities aimed at enriching the cultural and intellectual aspects of students">أنشطة تهدف إلى إثراء الجانب الثقافي والفكري للطلاب</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3 data-ar="المهرجانات الثقافية" data-en="Cultural Festivals">المهرجانات الثقافية</h3>
+                    <p data-ar="مهرجانات سنوية تتضمن عروض مسرحية وشعرية ومعارض فنية" data-en="Annual festivals including theatrical and poetry performances and art exhibitions">مهرجانات سنوية تتضمن عروض مسرحية وشعرية ومعارض فنية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 data-ar="المحاضرات التوعوية" data-en="Awareness Lectures">المحاضرات التوعوية</h3>
+                    <p data-ar="محاضرات في مواضيع متنوعة تهم الطلاب والمجتمع المحلي" data-en="Lectures on various topics of interest to students and the local community">محاضرات في مواضيع متنوعة تهم الطلاب والمجتمع المحلي</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-ar="النشاطات الفنية" data-en="Artistic Activities">النشاطات الفنية</h3>
+                    <p data-ar="ورش فنية ومعارض للرسم والخط العربي والحرف اليدوية" data-en="Art workshops and exhibitions for painting, Arabic calligraphy, and handicrafts">ورش فنية ومعارض للرسم والخط العربي والحرف اليدوية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-ar="التبادل الثقافي" data-en="Cultural Exchange">التبادل الثقافي</h3>
+                    <p data-ar="برامج تبادل ثقافي مع جامعات وكليات محلية وإقليمية" data-en="Cultural exchange programs with local and regional universities and colleges">برامج تبادل ثقافي مع جامعات وكليات محلية وإقليمية</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sports Activities -->
+        <section class="sports-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="الأنشطة الرياضية" data-en="Sports Activities">الأنشطة الرياضية</h2>
+                <p data-ar="أنشطة رياضية متنوعة لتعزيز الصحة البدنية والروح الرياضية" data-en="Various sports activities to promote physical health and sportsmanship">أنشطة رياضية متنوعة لتعزيز الصحة البدنية والروح الرياضية</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 data-ar="كرة القدم" data-en="Football">كرة القدم</h3>
+                    <p data-ar="فريق كرة القدم للكلية يشارك في البطولات المحلية والجامعية" data-en="College football team participates in local and university championships">فريق كرة القدم للكلية يشارك في البطولات المحلية والجامعية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3 data-ar="كرة السلة" data-en="Basketball">كرة السلة</h3>
+                    <p data-ar="فريق كرة السلة للطلاب والطالبات مع تدريبات منتظمة ومباريات ودية" data-en="Basketball team for male and female students with regular training and friendly matches">فريق كرة السلة للطلاب والطالبات مع تدريبات منتظمة ومباريات ودية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <h3 data-ar="تنس الطاولة" data-en="Table Tennis">تنس الطاولة</h3>
+                    <p data-ar="بطولات داخلية في تنس الطاولة للطلاب من جميع التخصصات" data-en="Internal table tennis tournaments for students from all specialties">بطولات داخلية في تنس الطاولة للطلاب من جميع التخصصات</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 data-ar="ألعاب القوى" data-en="Athletics">ألعاب القوى</h3>
+                    <p data-ar="مسابقات في الجري والقفز والرمي ضمن الألعاب الرياضية السنوية" data-en="Competitions in running, jumping, and throwing as part of annual sports games">مسابقات في الجري والقفز والرمي ضمن الألعاب الرياضية السنوية</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Social Activities -->
+        <section class="social-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="الأنشطة الاجتماعية" data-en="Social Activities">الأنشطة الاجتماعية</h2>
+                <p data-ar="أنشطة تهدف إلى تعزيز التواصل الاجتماعي وخدمة المجتمع" data-en="Activities aimed at enhancing social communication and community service">أنشطة تهدف إلى تعزيز التواصل الاجتماعي وخدمة المجتمع</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 data-ar="العمل التطوعي" data-en="Volunteer Work">العمل التطوعي</h3>
+                    <p data-ar="برامج تطوعية لخدمة المجتمع المحلي والمشاركة في الأعمال الخيرية" data-en="Volunteer programs to serve the local community and participate in charitable work">برامج تطوعية لخدمة المجتمع المحلي والمشاركة في الأعمال الخيرية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-ar="الحملات التوعوية" data-en="Awareness Campaigns">الحملات التوعوية</h3>
+                    <p data-ar="حملات توعوية صحية وبيئية واجتماعية لنشر الوعي في المجتمع" data-en="Health, environmental, and social awareness campaigns to spread awareness in the community">حملات توعوية صحية وبيئية واجتماعية لنشر الوعي في المجتمع</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3 data-ar="الفعاليات الاجتماعية" data-en="Social Events">الفعاليات الاجتماعية</h3>
+                    <p data-ar="حفلات التخرج والمناسبات الوطنية والدينية والفعاليات الترفيهية" data-en="Graduation parties, national and religious occasions, and recreational events">حفلات التخرج والمناسبات الوطنية والدينية والفعاليات الترفيهية</p>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-ar="الأندية الطلابية" data-en="Student Clubs">الأندية الطلابية</h3>
+                    <p data-ar="أندية طلابية متخصصة في مختلف المجالات العلمية والثقافية والاجتماعية" data-en="Student clubs specialized in various scientific, cultural, and social fields">أندية طلابية متخصصة في مختلف المجالات العلمية والثقافية والاجتماعية</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Activity Calendar -->
+        <section class="calendar-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="التقويم السنوي للأنشطة" data-en="Annual Activity Calendar">التقويم السنوي للأنشطة</h2>
+                <p data-ar="جدول زمني للأنشطة والفعاليات المخططة خلال العام الدراسي" data-en="Timeline of planned activities and events during the academic year">جدول زمني للأنشطة والفعاليات المخططة خلال العام الدراسي</p>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-month animate-on-scroll">
+                    <h3 data-ar="سبتمبر - أكتوبر" data-en="September - October">سبتمبر - أكتوبر</h3>
+                    <ul>
+                        <li data-ar="حفل استقبال الطلاب الجدد" data-en="New student welcome ceremony">حفل استقبال الطلاب الجدد</li>
+                        <li data-ar="تشكيل الأندية الطلابية" data-en="Formation of student clubs">تشكيل الأندية الطلابية</li>
+                        <li data-ar="بداية الأنشطة الرياضية" data-en="Start of sports activities">بداية الأنشطة الرياضية</li>
+                    </ul>
+                </div>
+                
+                <div class="calendar-month animate-on-scroll">
+                    <h3 data-ar="نوفمبر - ديسمبر" data-en="November - December">نوفمبر - ديسمبر</h3>
+                    <ul>
+                        <li data-ar="المؤتمر العلمي السنوي" data-en="Annual scientific conference">المؤتمر العلمي السنوي</li>
+                        <li data-ar="مسابقة البحث العلمي" data-en="Scientific research competition">مسابقة البحث العلمي</li>
+                        <li data-ar="المهرجان الثقافي" data-en="Cultural festival">المهرجان الثقافي</li>
+                    </ul>
+                </div>
+                
+                <div class="calendar-month animate-on-scroll">
+                    <h3 data-ar="يناير - فبراير" data-en="January - February">يناير - فبراير</h3>
+                    <ul>
+                        <li data-ar="ورش العمل التطبيقية" data-en="Practical workshops">ورش العمل التطبيقية</li>
+                        <li data-ar="البطولة الرياضية الداخلية" data-en="Internal sports championship">البطولة الرياضية الداخلية</li>
+                        <li data-ar="حملة التوعية الصحية" data-en="Health awareness campaign">حملة التوعية الصحية</li>
+                    </ul>
+                </div>
+                
+                <div class="calendar-month animate-on-scroll">
+                    <h3 data-ar="مارس - أبريل" data-en="March - April">مارس - أبريل</h3>
+                    <ul>
+                        <li data-ar="معرض مشاريع التخرج" data-en="Graduation projects exhibition">معرض مشاريع التخرج</li>
+                        <li data-ar="يوم المهن والتوظيف" data-en="Career and employment day">يوم المهن والتوظيف</li>
+                        <li data-ar="الأسبوع البيئي" data-en="Environmental week">الأسبوع البيئي</li>
+                    </ul>
+                </div>
+                
+                <div class="calendar-month animate-on-scroll">
+                    <h3 data-ar="مايو - يونيو" data-en="May - June">مايو - يونيو</h3>
+                    <ul>
+                        <li data-ar="حفل التخرج السنوي" data-en="Annual graduation ceremony">حفل التخرج السنوي</li>
+                        <li data-ar="تكريم الطلاب المتفوقين" data-en="Honoring outstanding students">تكريم الطلاب المتفوقين</li>
+                        <li data-ar="ختام الأنشطة الطلابية" data-en="Conclusion of student activities">ختام الأنشطة الطلابية</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="College Logo">
+                <p data-ar="كلية ابن سيرين للعلوم الطبية والتقنية" data-en="Ibn Sirin College for Medical and Technical Sciences">كلية ابن سيرين للعلوم الطبية والتقنية</p>
+                <p data-ar="التميز في التعليم لبناء مستقبل أفضل" data-en="Excellence in education for a better future">التميز في التعليم لبناء مستقبل أفضل</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3 data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-ar="اليمن - صنعاء - شملان" data-en="Yemen - Sana'a - Shamlan">اليمن - صنعاء - شملان</span></p>
+                <p><i class="fas fa-phone"></i> +967 780 536 333</p>
+                <p><i class="fas fa-envelope"></i> ibnsereencollage@gmail.com</p>
+                <p><i class="fas fa-clock"></i> <span data-ar="السبت - الخميس: 8 صباحاً - 5 مساءً" data-en="Saturday - Thursday: 8 AM - 5 PM">السبت - الخميس: 8 صباحاً - 5 مساءً</span></p>
+            </div>
+            
+            <div class="quick-links">
+                <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+                    <li><a href="index.html#specialties" data-ar="التخصصات" data-en="Specialties">التخصصات</a></li>
+                    <li><a href="faculty.html" data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</a></li>
+                    <li><a href="regulations.html" data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</a></li>
+                    <li><a href="activities.html" data-ar="الأنشطة" data-en="Activities">الأنشطة</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p data-ar="© 2023 كلية ابن سيرين للعلوم الطبية والتقنية. جميع الحقوق محفوظة." data-en="© 2023 Ibn Sirin College for Medical and Technical Sciences. All rights reserved.">© 2023 كلية ابن سيرين للعلوم الطبية والتقنية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

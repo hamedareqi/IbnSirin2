@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العمادة - كلية ابن سيرين للعلوم الطبية والتقنية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body dir="rtl">
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button onclick="toggleLanguage()" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span id="lang-text">English</span>
+        </button>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/967780536333" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Sidebar Navigation for Desktop -->
+    <nav class="sidebar-nav">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.png" alt="College Logo">
+                <div class="logo-text">
+                    <h1 data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                    <p data-ar="للعلوم الطبية والتقنية" data-en="For Medical and Technical Sciences">للعلوم الطبية والتقنية</p>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a></li>
+            <li><a href="index.html#about"><i class="fas fa-info-circle"></i> <span data-ar="من نحن" data-en="About Us">من نحن</span></a></li>
+            <li><a href="index.html#specialties"><i class="fas fa-graduation-cap"></i> <span data-ar="التخصصات" data-en="Specialties">التخصصات</span></a></li>
+            <li><a href="faculty.html"><i class="fas fa-users"></i> <span data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</span></a></li>
+            <li><a href="regulations.html"><i class="fas fa-file-alt"></i> <span data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</span></a></li>
+            <li><a href="activities.html"><i class="fas fa-calendar-alt"></i> <span data-ar="الأنشطة" data-en="Activities">الأنشطة</span></a></li>
+            <li><a href="deanship.html" class="active"><i class="fas fa-university"></i> <span data-ar="العمادة" data-en="Deanship">العمادة</span></a></li>
+            <li><a href="structure.html"><i class="fas fa-sitemap"></i> <span data-ar="الهيكل التنظيمي" data-en="Organizational Structure">الهيكل التنظيمي</span></a></li>
+            <li><a href="innovations.html"><i class="fas fa-lightbulb"></i> <span data-ar="ابتكارات الطلاب" data-en="Student Innovations">ابتكارات الطلاب</span></a></li>
+            <li><a href="graduates.html"><i class="fas fa-user-graduate"></i> <span data-ar="الخريجين" data-en="Graduates">الخريجين</span></a></li>
+            <li><a href="medical-sciences.html"><i class="fas fa-heartbeat"></i> <span data-ar="العلوم الطبية" data-en="Medical Sciences">العلوم الطبية</span></a></li>
+            <li><a href="engineering.html"><i class="fas fa-cogs"></i> <span data-ar="الهندسة" data-en="Engineering">الهندسة</span></a></li>
+            <li><a href="technical-sciences.html"><i class="fas fa-laptop-code"></i> <span data-ar="العلوم التقنية" data-en="Technical Sciences">العلوم التقنية</span></a></li>
+            <li><a href="management.html"><i class="fas fa-chart-line"></i> <span data-ar="العلوم الإدارية" data-en="Management Sciences">العلوم الإدارية</span></a></li>
+            <li><a href="index.html#news"><i class="fas fa-newspaper"></i> <span data-ar="الأخبار" data-en="News">الأخبار</span></a></li>
+            <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> <span data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</span></a></li>
+            <li><a href="index.html#contact"><i class="fas fa-phone"></i> <span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span></a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="College Logo">
+            <div class="logo-text">
+                <h1 data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                <p data-ar="للعلوم الطبية والتقنية" data-en="For Medical and Technical Sciences">للعلوم الطبية والتقنية</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="menu-header">
+            <div class="logo">
+                <img src="logo.png" alt="College Logo" style="height: 50px;">
+                <div class="logo-text">
+                    <h1 style="font-size: 1.2rem;" data-ar="كلية ابن سيرين" data-en="Ibn Sirin College">كلية ابن سيرين</h1>
+                </div>
+            </div>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <ul>
+            <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            <li><a href="index.html#specialties" data-ar="التخصصات" data-en="Specialties">التخصصات</a></li>
+            <li><a href="faculty.html" data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</a></li>
+            <li><a href="regulations.html" data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</a></li>
+            <li><a href="activities.html" data-ar="الأنشطة" data-en="Activities">الأنشطة</a></li>
+            <li><a href="deanship.html" data-ar="العمادة" data-en="Deanship">العمادة</a></li>
+            <li><a href="structure.html" data-ar="الهيكل التنظيمي" data-en="Organizational Structure">الهيكل التنظيمي</a></li>
+            <li><a href="innovations.html" data-ar="ابتكارات الطلاب" data-en="Student Innovations">ابتكارات الطلاب</a></li>
+            <li><a href="graduates.html" data-ar="الخريجين" data-en="Graduates">الخريجين</a></li>
+            <li><a href="index.html#news" data-ar="الأخبار" data-en="News">الأخبار</a></li>
+            <li><a href="index.html#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+            <li><a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 data-ar="العمادة" data-en="Deanship">العمادة</h1>
+                <p data-ar="تعرف على إدارة الكلية ورؤيتها ورسالتها في تقديم تعليم متميز" data-en="Learn about the college administration and its vision and mission in providing excellent education">تعرف على إدارة الكلية ورؤيتها ورسالتها في تقديم تعليم متميز</p>
+            </div>
+        </section>
+        
+        <!-- Dean's Message -->
+        <section class="dean-message-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="كلمة العميد" data-en="Dean's Message">كلمة العميد</h2>
+            </div>
+            
+            <div class="dean-message-content animate-on-scroll">
+                <div class="dean-photo">
+                    <div class="dean-image-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 data-ar="د. محمد أحمد الشامي" data-en="Dr. Mohammed Ahmed Al-Shami">د. محمد أحمد الشامي</h3>
+                    <p data-ar="عميد الكلية" data-en="Dean of the College">عميد الكلية</p>
+                </div>
+                
+                <div class="dean-message-text">
+                    <p data-ar="بسم الله الرحمن الرحيم، والصلاة والسلام على أشرف المرسلين سيدنا محمد وعلى آله وصحبه أجمعين." data-en="In the name of Allah, the Most Gracious, the Most Merciful, and peace and blessings be upon the most honorable of messengers, our Prophet Muhammad, and upon his family and companions.">بسم الله الرحمن الرحيم، والصلاة والسلام على أشرف المرسلين سيدنا محمد وعلى آله وصحبه أجمعين.</p>
+                    
+                    <p data-ar="يسعدني أن أرحب بكم في كلية ابن سيرين للعلوم الطبية والتقنية، هذا الصرح التعليمي الذي يسعى إلى تقديم تعليم متميز يواكب التطورات العلمية والتقنية الحديثة." data-en="I am pleased to welcome you to Ibn Sirin College for Medical and Technical Sciences, this educational institution that strives to provide excellent education that keeps pace with modern scientific and technical developments.">يسعدني أن أرحب بكم في كلية ابن سيرين للعلوم الطبية والتقنية، هذا الصرح التعليمي الذي يسعى إلى تقديم تعليم متميز يواكب التطورات العلمية والتقنية الحديثة.</p>
+                    
+                    <p data-ar="إن رؤيتنا تتمحور حول إعداد جيل من الخريجين المؤهلين علمياً ومهنياً، القادرين على المساهمة الفعالة في بناء وتطوير المجتمع. نحن نؤمن بأن التعليم الجيد هو الأساس لبناء مستقبل مشرق لبلدنا الحبيب اليمن." data-en="Our vision revolves around preparing a generation of scientifically and professionally qualified graduates, capable of effective contribution to building and developing society. We believe that good education is the foundation for building a bright future for our beloved country, Yemen.">إن رؤيتنا تتمحور حول إعداد جيل من الخريجين المؤهلين علمياً ومهنياً، القادرين على المساهمة الفعالة في بناء وتطوير المجتمع. نحن نؤمن بأن التعليم الجيد هو الأساس لبناء مستقبل مشرق لبلدنا الحبيب اليمن.</p>
+                    
+                    <p data-ar="نحن ملتزمون بتوفير بيئة تعليمية محفزة ومتطورة، تجمع بين الأصالة والمعاصرة، وتعتمد على أحدث الوسائل التعليمية والتقنيات الحديثة. كما نسعى إلى تعزيز البحث العلمي والابتكار، وربط التعليم بسوق العمل لضمان حصول خريجينا على فرص عمل مناسبة." data-en="We are committed to providing a stimulating and advanced educational environment that combines authenticity and modernity, and relies on the latest educational methods and modern technologies. We also strive to promote scientific research and innovation, and link education to the job market to ensure our graduates get suitable job opportunities.">نحن ملتزمون بتوفير بيئة تعليمية محفزة ومتطورة، تجمع بين الأصالة والمعاصرة، وتعتمد على أحدث الوسائل التعليمية والتقنيات الحديثة. كما نسعى إلى تعزيز البحث العلمي والابتكار، وربط التعليم بسوق العمل لضمان حصول خريجينا على فرص عمل مناسبة.</p>
+                    
+                    <p data-ar="أدعو جميع الطلاب والطالبات إلى الاستفادة من الفرص التعليمية المتاحة في كليتنا، والعمل بجد واجتهاد لتحقيق أهدافهم الأكاديمية والمهنية. كما أدعو أعضاء هيئة التدريس والموظفين إلى مواصلة العطاء والتميز في خدمة العملية التعليمية." data-en="I invite all male and female students to take advantage of the educational opportunities available in our college, and work hard and diligently to achieve their academic and professional goals. I also invite faculty members and staff to continue giving and excelling in serving the educational process.">أدعو جميع الطلاب والطالبات إلى الاستفادة من الفرص التعليمية المتاحة في كليتنا، والعمل بجد واجتهاد لتحقيق أهدافهم الأكاديمية والمهنية. كما أدعو أعضاء هيئة التدريس والموظفين إلى مواصلة العطاء والتميز في خدمة العملية التعليمية.</p>
+                    
+                    <p data-ar="وفقنا الله جميعاً لما فيه خير بلدنا وأمتنا، وجعل عملنا خالصاً لوجهه الكريم." data-en="May Allah guide us all to what is good for our country and our nation, and make our work sincere for His noble sake.">وفقنا الله جميعاً لما فيه خير بلدنا وأمتنا، وجعل عملنا خالصاً لوجهه الكريم.</p>
+                    
+                    <div class="dean-signature">
+                        <p data-ar="د. محمد أحمد الشامي" data-en="Dr. Mohammed Ahmed Al-Shami">د. محمد أحمد الشامي</p>
+                        <p data-ar="عميد كلية ابن سيرين للعلوم الطبية والتقنية" data-en="Dean of Ibn Sirin College for Medical and Technical Sciences">عميد كلية ابن سيرين للعلوم الطبية والتقنية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Deanship Objectives -->
+        <section class="objectives-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="أهداف العمادة" data-en="Deanship Objectives">أهداف العمادة</h2>
+                <p data-ar="الأهداف الاستراتيجية التي تسعى العمادة لتحقيقها" data-en="Strategic objectives that the deanship seeks to achieve">الأهداف الاستراتيجية التي تسعى العمادة لتحقيقها</p>
+            </div>
+            
+            <div class="objectives-grid">
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-ar="التميز الأكاديمي" data-en="Academic Excellence">التميز الأكاديمي</h3>
+                    <p data-ar="تحقيق أعلى معايير الجودة في التعليم والبحث العلمي لإعداد خريجين متميزين قادرين على المنافسة في سوق العمل المحلي والإقليمي." data-en="Achieving the highest quality standards in education and scientific research to prepare distinguished graduates capable of competing in the local and regional job market.">تحقيق أعلى معايير الجودة في التعليم والبحث العلمي لإعداد خريجين متميزين قادرين على المنافسة في سوق العمل المحلي والإقليمي.</p>
+                </div>
+                
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-ar="الابتكار والتطوير" data-en="Innovation and Development">الابتكار والتطوير</h3>
+                    <p data-ar="تعزيز ثقافة الابتكار والإبداع بين الطلاب وأعضاء هيئة التدريس، وتطوير البرامج الأكاديمية لتواكب التطورات العلمية والتقنية الحديثة." data-en="Promoting a culture of innovation and creativity among students and faculty members, and developing academic programs to keep pace with modern scientific and technical developments.">تعزيز ثقافة الابتكار والإبداع بين الطلاب وأعضاء هيئة التدريس، وتطوير البرامج الأكاديمية لتواكب التطورات العلمية والتقنية الحديثة.</p>
+                </div>
+                
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-ar="الشراكة المجتمعية" data-en="Community Partnership">الشراكة المجتمعية</h3>
+                    <p data-ar="بناء شراكات استراتيجية مع المؤسسات الحكومية والخاصة لتعزيز دور الكلية في خدمة المجتمع وتلبية احتياجاته التنموية." data-en="Building strategic partnerships with government and private institutions to enhance the college's role in serving the community and meeting its developmental needs.">بناء شراكات استراتيجية مع المؤسسات الحكومية والخاصة لتعزيز دور الكلية في خدمة المجتمع وتلبية احتياجاته التنموية.</p>
+                </div>
+                
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-ar="التعاون الدولي" data-en="International Cooperation">التعاون الدولي</h3>
+                    <p data-ar="إقامة علاقات تعاون مع الجامعات والمؤسسات التعليمية الدولية لتبادل الخبرات والمعرفة وتطوير قدرات الكادر الأكاديمي والإداري." data-en="Establishing cooperative relations with international universities and educational institutions to exchange experiences and knowledge and develop the capabilities of academic and administrative staff.">إقامة علاقات تعاون مع الجامعات والمؤسسات التعليمية الدولية لتبادل الخبرات والمعرفة وتطوير قدرات الكادر الأكاديمي والإداري.</p>
+                </div>
+                
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-ar="التطوير المستمر" data-en="Continuous Development">التطوير المستمر</h3>
+                    <p data-ar="تطوير البنية التحتية والمرافق التعليمية والبحثية، وتحديث المناهج والبرامج الدراسية بما يتماشى مع المعايير الدولية للجودة." data-en="Developing infrastructure and educational and research facilities, and updating curricula and academic programs in line with international quality standards.">تطوير البنية التحتية والمرافق التعليمية والبحثية، وتحديث المناهج والبرامج الدراسية بما يتماشى مع المعايير الدولية للجودة.</p>
+                </div>
+                
+                <div class="objective-card animate-on-scroll">
+                    <div class="objective-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-ar="تنمية الموارد البشرية" data-en="Human Resource Development">تنمية الموارد البشرية</h3>
+                    <p data-ar="الاستثمار في تطوير قدرات أعضاء هيئة التدريس والموظفين من خلال برامج التدريب والتأهيل المستمر لضمان تقديم خدمات تعليمية متميزة." data-en="Investing in developing the capabilities of faculty members and staff through continuous training and qualification programs to ensure the provision of excellent educational services.">الاستثمار في تطوير قدرات أعضاء هيئة التدريس والموظفين من خلال برامج التدريب والتأهيل المستمر لضمان تقديم خدمات تعليمية متميزة.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Deanship Departments -->
+        <section class="departments-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="إدارات العمادة" data-en="Deanship Departments">إدارات العمادة</h2>
+                <p data-ar="الإدارات والوحدات التابعة للعمادة ومهامها" data-en="Departments and units affiliated with the deanship and their tasks">الإدارات والوحدات التابعة للعمادة ومهامها</p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="department-card animate-on-scroll">
+                    <div class="department-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3 data-ar="نائب العميد للشؤون الأكاديمية" data-en="Vice Dean for Academic Affairs">نائب العميد للشؤون الأكاديمية</h3>
+                    <p data-ar="الإشراف على البرامج الأكاديمية والمناهج الدراسية وضمان جودة التعليم" data-en="Supervising academic programs and curricula and ensuring quality of education">الإشراف على البرامج الأكاديمية والمناهج الدراسية وضمان جودة التعليم</p>
+                    <ul>
+                        <li data-ar="تطوير البرامج الأكاديمية" data-en="Developing academic programs">تطوير البرامج الأكاديمية</li>
+                        <li data-ar="مراجعة المناهج الدراسية" data-en="Reviewing curricula">مراجعة المناهج الدراسية</li>
+                        <li data-ar="ضمان الجودة الأكاديمية" data-en="Ensuring academic quality">ضمان الجودة الأكاديمية</li>
+                    </ul>
+                </div>
+                
+                <div class="department-card animate-on-scroll">
+                    <div class="department-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-ar="نائب العميد لشؤون الطلاب" data-en="Vice Dean for Student Affairs">نائب العميد لشؤون الطلاب</h3>
+                    <p data-ar="الإشراف على الخدمات الطلابية والأنشطة اللاصفية ورعاية الطلاب" data-en="Supervising student services, extracurricular activities, and student care">الإشراف على الخدمات الطلابية والأنشطة اللاصفية ورعاية الطلاب</p>
+                    <ul>
+                        <li data-ar="الخدمات الطلابية" data-en="Student services">الخدمات الطلابية</li>
+                        <li data-ar="الأنشطة الطلابية" data-en="Student activities">الأنشطة الطلابية</li>
+                        <li data-ar="الإرشاد الأكاديمي" data-en="Academic counseling">الإرشاد الأكاديمي</li>
+                    </ul>
+                </div>
+                
+                <div class="department-card animate-on-scroll">
+                    <div class="department-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-ar="نائب العميد للدراسات العليا والبحث العلمي" data-en="Vice Dean for Graduate Studies and Scientific Research">نائب العميد للدراسات العليا والبحث العلمي</h3>
+                    <p data-ar="الإشراف على برامج الدراسات العليا والبحوث العلمية والمشاريع البحثية" data-en="Supervising graduate programs, scientific research, and research projects">الإشراف على برامج الدراسات العليا والبحوث العلمية والمشاريع البحثية</p>
+                    <ul>
+                        <li data-ar="برامج الماجستير والدكتوراه" data-en="Master's and PhD programs">برامج الماجستير والدكتوراه</li>
+                        <li data-ar="المشاريع البحثية" data-en="Research projects">المشاريع البحثية</li>
+                        <li data-ar="النشر العلمي" data-en="Scientific publishing">النشر العلمي</li>
+                    </ul>
+                </div>
+                
+                <div class="department-card animate-on-scroll">
+                    <div class="department-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-ar="نائب العميد للشؤون الخارجية والتعاون" data-en="Vice Dean for External Affairs and Cooperation">نائب العميد للشؤون الخارجية والتعاون</h3>
+                    <p data-ar="إدارة العلاقات الخارجية والشراكات مع المؤسسات المحلية والدولية" data-en="Managing external relations and partnerships with local and international institutions">إدارة العلاقات الخارجية والشراكات مع المؤسسات المحلية والدولية</p>
+                    <ul>
+                        <li data-ar="الشراكات الاستراتيجية" data-en="Strategic partnerships">الشراكات الاستراتيجية</li>
+                        <li data-ar="التعاون الدولي" data-en="International cooperation">التعاون الدولي</li>
+                        <li data-ar="برامج التبادل" data-en="Exchange programs">برامج التبادل</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Strategic Plan -->
+        <section class="strategic-plan-section">
+            <div class="section-header animate-on-scroll">
+                <h2 data-ar="الخطة الاستراتيجية" data-en="Strategic Plan">الخطة الاستراتيجية</h2>
+                <p data-ar="الخطة الاستراتيجية للكلية للسنوات القادمة" data-en="The college's strategic plan for the coming years">الخطة الاستراتيجية للكلية للسنوات القادمة</p>
+            </div>
+            
+            <div class="strategic-timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3 data-ar="التطوير والتحديث" data-en="Development and Modernization">التطوير والتحديث</h3>
+                        <ul>
+                            <li data-ar="تحديث المختبرات والمعامل" data-en="Updating laboratories and labs">تحديث المختبرات والمعامل</li>
+                            <li data-ar="تطوير المناهج الدراسية" data-en="Developing curricula">تطوير المناهج الدراسية</li>
+                            <li data-ar="تدريب الكادر الأكاديمي" data-en="Training academic staff">تدريب الكادر الأكاديمي</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3 data-ar="التوسع والنمو" data-en="Expansion and Growth">التوسع والنمو</h3>
+                        <ul>
+                            <li data-ar="إضافة تخصصات جديدة" data-en="Adding new specialties">إضافة تخصصات جديدة</li>
+                            <li data-ar="زيادة القدرة الاستيعابية" data-en="Increasing capacity">زيادة القدرة الاستيعابية</li>
+                            <li data-ar="تطوير البنية التحتية" data-en="Developing infrastructure">تطوير البنية التحتية</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3 data-ar="الاعتماد والجودة" data-en="Accreditation and Quality">الاعتماد والجودة</h3>
+                        <ul>
+                            <li data-ar="الحصول على الاعتماد الأكاديمي" data-en="Obtaining academic accreditation">الحصول على الاعتماد الأكاديمي</li>
+                            <li data-ar="تطبيق معايير الجودة الدولية" data-en="Applying international quality standards">تطبيق معايير الجودة الدولية</li>
+                            <li data-ar="تقييم وتطوير البرامج" data-en="Evaluating and developing programs">تقييم وتطوير البرامج</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-year">2027</div>
+                    <div class="timeline-content">
+                        <h3 data-ar="الريادة والتميز" data-en="Leadership and Excellence">الريادة والتميز</h3>
+                        <ul>
+                            <li data-ar="تحقيق الريادة الإقليمية" data-en="Achieving regional leadership">تحقيق الريادة الإقليمية</li>
+                            <li data-ar="إطلاق برامج الدراسات العليا" data-en="Launching graduate programs">إطلاق برامج الدراسات العليا</li>
+                            <li data-ar="تعزيز البحث العلمي" data-en="Enhancing scientific research">تعزيز البحث العلمي</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="College Logo">
+                <p data-ar="كلية ابن سيرين للعلوم الطبية والتقنية" data-en="Ibn Sirin College for Medical and Technical Sciences">كلية ابن سيرين للعلوم الطبية والتقنية</p>
+                <p data-ar="التميز في التعليم لبناء مستقبل أفضل" data-en="Excellence in education for a better future">التميز في التعليم لبناء مستقبل أفضل</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3 data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-ar="اليمن - صنعاء - شملان" data-en="Yemen - Sana'a - Shamlan">اليمن - صنعاء - شملان</span></p>
+                <p><i class="fas fa-phone"></i> +967 780 536 333</p>
+                <p><i class="fas fa-envelope"></i> ibnsereencollage@gmail.com</p>
+                <p><i class="fas fa-clock"></i> <span data-ar="السبت - الخميس: 8 صباحاً - 5 مساءً" data-en="Saturday - Thursday: 8 AM - 5 PM">السبت - الخميس: 8 صباحاً - 5 مساءً</span></p>
+            </div>
+            
+            <div class="quick-links">
+                <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+                    <li><a href="index.html#specialties" data-ar="التخصصات" data-en="Specialties">التخصصات</a></li>
+                    <li><a href="faculty.html" data-ar="كادر الكلية" data-en="Faculty Staff">كادر الكلية</a></li>
+                    <li><a href="regulations.html" data-ar="لوائح الكلية" data-en="College Regulations">لوائح الكلية</a></li>
+                    <li><a href="activities.html" data-ar="الأنشطة" data-en="Activities">الأنشطة</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p data-ar="© 2023 كلية ابن سيرين للعلوم الطبية والتقنية. جميع الحقوق محفوظة." data-en="© 2023 Ibn Sirin College for Medical and Technical Sciences. All rights reserved.">© 2023 كلية ابن سيرين للعلوم الطبية والتقنية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
